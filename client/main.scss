@@ -1,0 +1,156 @@
+/* CSS declarations go here */
+
+
+body, html {
+  padding: 0;
+  margin: 0;
+  // padding: 100px;
+}
+
+html, body {
+  height: 100%;
+}
+
+.app {
+  height: 100%;
+}
+
+
+@mixin font {
+  font-family: 'Dosis', sans-serif;
+  font-weight: normal;
+}
+
+$greyBackground: #f6f5fa;
+$grey: #e1e4e8;
+
+$maxWidth: 800px;
+
+
+
+.search {
+
+
+  &-content {
+    max-width: $maxWidth;
+    margin: auto;
+  }
+
+  &-container {
+    // padding-top: 300px;
+    padding-bottom: 20px;
+    display: flex;
+
+  }
+
+  &-input {
+    flex: 1 1 auto
+  }
+
+  &-button {
+    flex: 0 0 auto;
+    margin-left: 10px;
+  }
+}
+
+
+.signup {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: auto;
+}
+
+.welcome {
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &-center {
+    // max-width: 400px;
+  }
+
+  &-title {
+    font-size: 3em;
+    text-align: center;
+    @include font;
+    margin-bottom: 20px;
+  }
+}
+
+.waiting {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+}
+
+.nav {
+  // margin-bottom: 30px;
+  border-bottom: 1px solid $grey;
+  background: $greyBackground;
+
+  &-content {
+    max-width: $maxWidth;
+    margin: auto;
+    padding: 8px 0px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &-part {
+    &-left, &-right {
+      flex: 1 1 auto;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    &-center {
+      flex: 0 0 500px;
+    }
+
+    &-left {
+      justify-content: flex-start;
+    }
+
+    &-right {
+      justify-content: flex-end;
+    }
+  }
+
+  &-avatar {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &-img {
+      width: 30px;
+      border: 1px solid $grey;
+      border-radius: 5px;
+    }
+
+    &-button {
+      padding: 0!important;
+      border: 0!important;
+      background: transparent!important;
+      box-shadow: none!important;
+    }
+  }
+
+  &-logo {
+    height: 35px;
+  }
+}
